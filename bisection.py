@@ -42,11 +42,14 @@ def plot_bisection(a, b, n):
     
     plt.xlabel('x')
     plt.ylabel('f(x)')
-    plt.title('Visualisasi Metode Bolzano dengan f(x) = e^x - 3')
+    plt.title('Visualisasi Metode Bolzano dengan f(x) = e^x - 3') #ganti aj klo maw ini fungsinya
     plt.legend()
     plt.show()
     
     df = pd.DataFrame(results, columns=["Iterasi", "a", "b", "c", "f(c)"])
     print(df.to_string(index=False))
-    
-plot_bisection(0, 2, 20)
+
+x1 = input("Masukkan nilai x1(titik pertama): ")
+x2 = input("Masukkan nilai x2(titik kedua): ")
+iterasi = input("Masukkan jumlah iterasi: ")
+plot_bisection(float(x1), float(x2), int(iterasi))
